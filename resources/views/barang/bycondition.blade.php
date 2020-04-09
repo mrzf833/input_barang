@@ -24,8 +24,8 @@
                 <tr>
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td class="align-items-center">{{ $barang->nama }}</td>
-                    <td>{{ $barang->created_at }}</td>
-                    <td>{{ $barang->exp_barang }}</td>
+                    <td>{{ $barang->created_at->format('d-m-Y') }}</td>
+                    <td>{{ $barang->exp_barang->format('d-m-Y') }}</td>
                     <td><div class="btn text-uppercase {{ $barang->bg_alert }}">{{ $barang->message }}</div></td>
                     <td>
                         <a href="{{ route('barang.edit.kondisi',[$barang->id,$kondisi_sebelum_dirubah]) }}" class="btn btn-info">Edit</a>
